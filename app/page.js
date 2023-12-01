@@ -1,14 +1,6 @@
 "use client";
 
-import {
-  Box,
-  Grid,
-  VStack,
-  Image,
-  Text,
-  List,
-  HStack,
-} from "@chakra-ui/react";
+import { Box, Grid, VStack, Image, Text, List, HStack } from "@chakra-ui/react";
 import {
   IoLogoWhatsapp,
   IoLogoInstagram,
@@ -33,7 +25,7 @@ const HomePage = () => {
       iconColor: "#E1306C",
     },
     {
-      url: "https://mala-sandy.vercel.app/",
+      url: "https://mala-suvenir.vercel.app/",
       icon: MdOutlineWeb,
       text: "Website",
       iconColor: "gray.600",
@@ -77,13 +69,13 @@ const HomePage = () => {
             whileTap={{ scale: 0.9 }}
           />
           <Text
-          fontSize={30}
-          fontWeight="bold"
-          color={"white"}
-          as={motion.h1}
-          initial={{x: "-50px", opacity: 0}}
-          animate={{x: "0px", opacity: 1}}
-          transition={"linear 0.1s"}
+            fontSize={30}
+            fontWeight="bold"
+            color={"white"}
+            as={motion.h1}
+            initial={{ x: "-50px", opacity: 0 }}
+            animate={{ x: "0px", opacity: 1 }}
+            transition={"linear 0.1s"}
           >
             Crafting Timeless Memories
           </Text>
@@ -92,10 +84,13 @@ const HomePage = () => {
             variants={parentContainer}
             initial="hidden"
             animate="show"
-            
           >
             {links.map((link, index) => (
-              <Link href={link.url} key={index} style={{ textDecoration: 'none' }}>
+              <Link
+                href={link.url}
+                key={index}
+                style={{ textDecoration: "none" }}
+              >
                 <HStack
                   w="15em"
                   h="3em"
@@ -103,7 +98,6 @@ const HomePage = () => {
                   bgGradient="linear(to-l, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.8))"
                   color="white"
                   justifyContent={"space-between"}
-                  
                   p={"1em"}
                   my={"1em"}
                   as={motion.div}
@@ -116,7 +110,6 @@ const HomePage = () => {
                     fontSize={20}
                     fontWeight="bold"
                     color={"gray.900"}
-                    
                   >
                     {link.text}
                   </Text>
@@ -125,14 +118,18 @@ const HomePage = () => {
               </Link>
             ))}
           </List>
-          <Text my={"3em"} fontSize={'sm'} textAlign={'center'} as={motion.h1}
-          initial={{x: "-50px", opacity: 0}}
-          animate={{x: "0px", opacity: 1}}
-          transition={"linear 0.1s"}>
-          © 2023 MALA. All rights reserved
-        </Text>
+          <Text
+            my={"3em"}
+            fontSize={"sm"}
+            textAlign={"center"}
+            as={motion.h1}
+            initial={{ x: "-50px", opacity: 0 }}
+            animate={{ x: "0px", opacity: 1 }}
+            transition={"linear 0.1s"}
+          >
+            © 2023 MALA. All rights reserved
+          </Text>
         </VStack>
-        
       </Grid>
     </Box>
   );
